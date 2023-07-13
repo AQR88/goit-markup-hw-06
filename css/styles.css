@@ -6,12 +6,37 @@ body {
 
 /* Common clases */
 
+/* Base styles for small devices */
+
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 428px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: 2px solid red;
+
+  /* width: 1158px;
+  
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 15px; */
+}
+
+/* Tablet screeen */
+@media only screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+
+/* Desctop screen */
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .section {
