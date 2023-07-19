@@ -489,9 +489,14 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-@media only screen and (max-width: 1158px) {
+@media only screen and (max-width: 1157.98px) {
   .features-item-text {
     font-weight: 500;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .features-item-text {
+    width: 264px;
   }
 }
 
