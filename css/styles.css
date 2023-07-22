@@ -17,9 +17,19 @@ body {
   padding-right: 16px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .team .container,
+  .customers .container,
+  .footer .container {
+    min-width: 584px;
+  }
+}
 /* Tablet screeen */
+
 @media only screen and (min-width: 768px) {
-  .container {
+  .header .container,
+  .hero .container,
+  .features .container {
     min-width: 768px;
   }
 }
@@ -75,7 +85,7 @@ body {
 
 .card-set-item {
   width: calc(
-    (100% - (var(--items)-1) * var(--indent-vertical)) / var(--items)
+    (100% - (var(--items) - 1) * var(--indent-vertical)) / var(--items)
   );
 }
 
@@ -85,7 +95,6 @@ body {
   --main-tittle-color: #2e2f42;
   --main-text-color: #434455;
   --text-light-color: #ffffff;
-  --active-color: #404bbf;
   --items: 1;
   --indent-vertical: 24px;
   --indent-horisontal: 48px;
@@ -204,7 +213,7 @@ img {
 }
 
 .active {
-  color: var(--active-color);
+  color: #404bbf;
 }
 
 .header-item-id.active::after {
@@ -263,12 +272,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media only screen and (max-width: 1157.98px) {
-  .header-contacts-link {
-    font-size: 12px;
-  }
-}
-
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: #404bbf;
@@ -293,10 +296,9 @@ img {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1157.98px) {
-  .hero {
-    padding-top: 112px;
-    padding-bottom: 112px;
+@media only screen and (max-width:1157.98px){
+  .hero{
+    padding: 112px 0;
   }
 }
 
@@ -358,7 +360,7 @@ img {
   text-align: center;
   letter-spacing: 0.72px;
   color: var(--text-light-color);
-  height: 86px;
+  /* height: 86px; */
   max-width: 320px;
   margin-bottom: 72px;
   margin-left: auto;
@@ -696,8 +698,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    padding-left: 108px;
-    width: 552px;
+<<<<<<< HEAD
+    /* padding-left: 108px; */
+=======
+    padding: 0 108px;
+>>>>>>> parent of f5a1742 (mentor-fixing)
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -715,6 +720,13 @@ img {
 
 .footer-logo-text {
 }
+
+@media only screen  and (max-width:1157.98px){
+  .footer-logo-text{
+    margin-bottom: 72px;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .footer-logo-text {
     margin-right: 120px;
@@ -733,7 +745,6 @@ img {
   width: 264px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 72px;
   text-align: left;
 }
 
@@ -755,25 +766,27 @@ img {
 
 .footer-soc-net {
   display: flex;
-
   flex-direction: column;
   width: 208px;
-  height: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 72px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+@media only screen and (max-width:767.98px){
+  .footer-soc-net{
+    margin: 0 auto 72px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
   .footer-soc-net {
-    margin: 0 24px;
+    margin-left: 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer-soc-net {
     margin-right: 80px;
-    margin-left: 0;
-    margin-bottom: 0;
+    /* margin-left: 0;
+    margin-bottom: 0; */
   }
 }
 
@@ -836,25 +849,31 @@ img {
 }
 
 .subsribe-form {
-  /* display: flex;
-  gap: 24px; */
+  display: flex;
+  
 }
 @media only screen and (min-width: 768px) {
   .subsribe-form {
-    display: flex;
     gap: 24px;
   }
 }
 
 .subsribe-form-lable {
-  width: 100%;
+  max-width: 100%;
+
+}
+
+@media only screen and (max-width:767.98px){
+  .subsribe-form {
+    gap: 16px;
+    flex-direction: column;
+  }
 }
 
 .subscribe-form-input {
   width: 100%;
-  max-height: 40px;
+  height: 40px;
   padding: 8px 16px;
-  margin-bottom: 16px;
   outline: transparent;
   color: #fff;
   font-family: Roboto;
@@ -868,6 +887,8 @@ img {
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .subscribe-form-input {
@@ -889,7 +910,7 @@ img {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  /* gap: 16px; */
+
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -1074,7 +1095,7 @@ img {
 }
 
 .customers-item {
-  max-width: 168px;
+  max-width: 190px;
 }
 
 @media only screen and (max-width: 1157.98px) {
@@ -1088,7 +1109,7 @@ img {
     column-gap: 16px;
   }
   .customers-item {
-    flex-basis: calc((100% - 24px) / 2);
+    flex-basis: calc((100% - 16px) / 2);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
@@ -1146,7 +1167,7 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: scroll;
+    overflow: scroll;
 }
 
 .is-hidden {
@@ -1165,7 +1186,9 @@ img {
   padding: 72px 16px 24px 16px;
   top: 350px;
   left: 50%;
+
   transform: translateX(-50%) translateY(-50%);
+
   max-width: 408px;
   min-height: 584px;
 
@@ -1176,10 +1199,8 @@ img {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 }
 
-@media only screen and (max-width: 400px) {
-  .modal {
-    width: 95%;
-  }
+@media only screen and (max-width:400px){
+  .modal{width:95%;}
 }
 
 @media only screen and (min-width: 468px) {
@@ -1192,13 +1213,16 @@ img {
   position: absolute;
   top: 24px;
   right: 24px;
+
   width: 24px;
   height: 24px;
+
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1227,10 +1251,13 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   transform: translateY(100%);
+
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
+
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1240,6 +1267,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
@@ -1256,19 +1284,23 @@ img {
 .modal-caption {
   display: block;
   width: 360px;
+
   margin-bottom: 16px;
+
   color: #2e2f42;
   text-align: center;
+
   font-size: 16px;
+
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
-@media only screen and (max-width: 400px) {
-  .modal-caption {
-    width: 100%;
-  }
+
+@media only screen and (max-width:400px){
+  .modal-caption{width:100%;}
 }
+
 
 .modal-form {
   height: 336px;
@@ -1373,11 +1405,10 @@ img {
   margin-bottom: 24px;
 }
 
-@media only screen and (max-width: 400px) {
-  .modal-form-chbx {
+@media only screen and (max-width: 400px){
+.modal-form-chbx {
     margin-bottom: 18px;
-  }
-}
+}}
 
 .modal-form-agreement {
   font-size: 12px;
@@ -1385,6 +1416,13 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
   user-select: none;
+}
+
+@media only screen and (max-width:395px){
+  .modal-form-agreement 
+  {
+    font-size: 9px;
+  }
 }
 
 .modal-form-checkbox {
@@ -1426,19 +1464,20 @@ img {
   color: #4d5ae5;
 }
 
-.modal-form-btn {
+.modal-form-btn{
+  
 }
 
-@media only screen and (max-width: 400px) {
-  .modal-form-btn {
+@media only screen and (max-width: 395px){
+.modal-form-btn {
     font-size: 12px;
     font-weight: 400;
     display: block;
     padding: 10px 32px;
     min-width: 100px;
     height: 40px;
+  margin: auto;}
   }
-}
 
 .modal-form-checkbox:checked
   + .modal-form-agreement
@@ -1507,11 +1546,13 @@ img {
   padding: 80px 40px;
   background-color: #fff;
   z-index: 999;
-
+  overflow-y: scroll;
+  overflow-x: hidden;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: scroll;
 }
+
+
 
 .menu-container.is-open {
   transform: translateX(0);
@@ -1542,14 +1583,14 @@ img {
   line-height: 1.1;
   letter-spacing: 0.72px;
 }
-
-.active-now {
-  color: var(--active-color);
-}
-
 .mobile-menu-link:active {
   color: #404bbf;
 }
+
+ .active-now {
+  color:#404BBF;
+ }
+
 .mobile-contacts {
   margin-bottom: 48px;
 }
@@ -1565,16 +1606,16 @@ img {
   color: var(--main-tittle-color);
 }
 .tel {
-  color: var(--active-color);
+  color: #4D5AE5;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.72px;
 }
 
-@media only screen and (max-width: 433px) {
-  .tel {
-    letter-spacing: normal;
+@media only screen and (max-width:433px){
+  .tel{
+    letter-spacing: 0.35px;
   }
 }
 
@@ -1591,9 +1632,10 @@ img {
   gap: 56px;
   justify-content: flex-start;
 }
-@media only screen and (max-width: 400px) {
-  .mobile-soc-list {
-    gap: 30px;
+
+@media only screen and (max-width:380px){
+  .mobile-soc-list{
+    gap:30px;
   }
 }
 
